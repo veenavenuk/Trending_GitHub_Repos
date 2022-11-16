@@ -1,0 +1,57 @@
+
+{% extends "account/base.html" %}
+
+{% block content %}
+    <div class="text-center">
+        <h2>Home</h2>
+        <p>Hello {{ user.first_name }}!</p>
+        <p>Your Username : {{ user }}</p>
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select Language
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="https://github.com/trending/c?since=daily">C</a>
+              <a class="dropdown-item" href="https://github.com/trending/java?since=daily">JAVA</a>
+              <a class="dropdown-item" href="https://github.com/trending/javascript?since=daily">JavaScript</a>
+            </div>
+          </div>
+
+          
+        <!--<a class="btn btn-dark" href="">Submit</a>-->
+    </div>
+   
+
+{% endblock %}
+
+
+{% block javascript %}
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  
+</script>
+<script>
+  $(document).ready(function () {
+    console.log("Entered");
+      $.ajax({
+          type: 'GET',
+          url: "{% url 'home' %}",
+          dataType: 'json',
+          
+  
+          success: function (response) {
+              console.log("response", response);
+              var token = response.tokn;
+              console.log(token);
+              window.location.replace(""); 
+              window.location = "http://127.0.0.1:8000/loginn/";
+              
+          },
+          error: function (response) {
+              alert("error");
+          }
+      })
+   
+  });
+</script> -->
+
+{% endblock javascript %}
